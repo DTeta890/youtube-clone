@@ -13,7 +13,7 @@ const VideoCard = ({
     return (
         <Card sx={{ width: { md: '320px', xs: '100%', boxShadow: 'none', borderRadius: 0 } }}>
             <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
-                <CardMedia image={snippet?.thumbnails?.high?.url} alt={snippet?.title} sx={{ width: 358, height: 180 }} />
+                <CardMedia image={snippet?.thumbnails?.high?.url || demoThumbnailUrl} alt={snippet?.title} sx={{ width: 358, height: 180 }} />
             </Link>
             <CardContent sx={{ backgroundColor: '#1e1e1e', height: '80px' }}>
                 <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
