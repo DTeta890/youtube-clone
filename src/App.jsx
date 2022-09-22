@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Box } from '@mui/material';
 import './App.css';
-import { Navbar, Feed, SearchFeed, VideoDetail, ChannelDetail } from './components';
+import { Navbar, Feed, SearchFeed, ChannelDetail } from './components';
 
 const App = () => (
     <BrowserRouter>
@@ -10,7 +10,6 @@ const App = () => (
             <Navbar />
             <Routes>
                 <Route path='/' exact element={<Feed />} />
-                <Route path='/video/:id' element={<VideoDetail />} />
                 <Route path='/channel/:id' element={<ChannelDetail />} />
                 <Route path='/search/:searchTerm' element={<SearchFeed />} />
             </Routes>
